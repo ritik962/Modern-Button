@@ -17,7 +17,7 @@ body {
   align-items: center;
   justify-content: center;
 }
-
+/*-----------------Approach----------------- 1
 .container {
   position: relative;
   height: 60px;
@@ -49,4 +49,36 @@ body {
 
 .container:active > .btn {
   top: 50%;
+}*/
+/* ------------Approach 2-------------*/
+.btn {
+  position: relative;
+  outline: none;
+  border: none;
+  border-radius: 2rem;
+  width: 180px;
+  height: 60px;
+  background-color: teal;
+}
+
+.btn::before {
+  content: "Button";
+  position: absolute;
+  top: -10%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--btn-bg);
+  border-radius: 2rem;
+  background-color: var(--hover-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.btn:active::before {
+  top: 0%;
 }
