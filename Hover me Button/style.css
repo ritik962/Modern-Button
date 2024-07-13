@@ -1,0 +1,101 @@
+:root {
+  --btn-clr: #333333;
+  --gradient-clr: linear-gradient(135deg, #7b4397, #dc2430);
+  --bg-color: #e8e8e8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100dvh;
+  /* background-color: var(--bg-color); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* ---------Button 1---------- 
+
+.btn {
+  position: relative;
+  background-color: var(--btn-clr);
+  color: var(--bg-color);
+  outline: none;
+  border: none;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: "Hello!";
+  position: absolute;
+  bottom: -90%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-transform: uppercase;
+  background: var(--gradient-clr);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn:hover::before {
+  bottom: 0;
+}*/
+
+/* ----------Button 2-----------*/
+
+.container {
+  position: relative;
+  height: 70px;
+  width: 200px;
+  background-color: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: var(--bg-color);
+}
+
+.container .upper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 90%;
+  width: 100%;
+  background-color: var(--btn-clr);
+  transition: all 0.3s ease-in-out;
+}
+
+.container .lower {
+  position: absolute;
+  bottom: -90%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: var(--gradient-clr);
+  transition: all 0.3s ease-in-out;
+}
+
+.container:hover .lower {
+  bottom: 0%;
+}
+
+.container:hover .upper {
+  top: -90%;
+}
